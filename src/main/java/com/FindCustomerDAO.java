@@ -9,10 +9,8 @@ public class FindCustomerDAO
 		Connection con= DBConnection.getCon();
 		try 
 		{
-			PreparedStatement ps= con.prepareStatement("select * from Customer72 where id=?");
-			String phNo = phno.toString();
-			String id= "NIT"+phNo.substring(5,phNo.length()-1);
-			ps.setString(1, id);
+			PreparedStatement ps= con.prepareStatement("select * from Customer72 where phno=?");
+			ps.setLong(1, phno);
 			
 			ResultSet rs = ps.executeQuery();
 			
@@ -25,6 +23,7 @@ public class FindCustomerDAO
 				cb.setMid(rs.getString(4));
 				cb.setPhno(rs.getLong(5));
 			}
+			
 			
 		} 
 		catch (Exception e) 

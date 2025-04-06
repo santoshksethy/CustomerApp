@@ -14,7 +14,7 @@ public class FindCustomerServlet extends GenericServlet
 		String phno = req.getParameter("cph");
 		CustomerBean customer = new FindCustomerDAO().findCustomer(Long.parseLong(phno));
 		
-		if(customer==null)
+		if(customer.getId()==null)
 		{
 			req.setAttribute("msg", "Customer don't exist!!!");
 			req.getRequestDispatcher("Msg.jsp").forward(req, res);
