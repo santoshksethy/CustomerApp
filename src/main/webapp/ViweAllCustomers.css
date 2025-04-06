@@ -1,0 +1,101 @@
+/* ===== BASE STYLES ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #CADCFC;
+    margin: 0; /* NEW: Remove default margin */
+    padding: 0;
+    display: flex; /* NEW: Enable flex centering */
+    justify-content: center; /* NEW: Horizontal center */
+    align-items: center; /* NEW: Vertical center */
+    min-height: 100vh; /* NEW: Full viewport height */
+    line-height: 1.6;
+}
+
+/* ===== FORM CONTAINER ===== */
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 36, 107, 0.1);
+    width: 90%;
+    max-width: 500px;
+    /* MODIFIED: Remove margin-auto (now handled by body flex) */
+    animation: fadeIn 0.5s ease; /* NEW: Smooth entry */
+}
+
+@keyframes fadeIn { /* NEW: Animation */
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TYPOGRAPHY ===== */
+.form-title {
+    color: #00246B;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem; /* MODIFIED: Use rem units */
+    position: relative; /* NEW: For icon positioning */
+}
+
+.form-title i { /* NEW: Icon styling */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.search-form { /* NEW: Dedicated search form style */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ... (keep existing input/label styles) ... */
+
+/* ===== BUTTONS ===== */
+input[type="submit"], 
+.view-all-btn { /* NEW: Consolidated button class */
+    background-color: #00246B;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* MODIFIED: Full width */
+    margin-top: 20px; /* MODIFIED: Consistent spacing */
+    box-shadow: 0 4px 8px rgba(0, 36, 107, 0.2); /* NEW */
+}
+
+input[type="submit"]:hover,
+.view-all-btn:hover {
+    background-color: #001a4d;
+    transform: translateY(-3px); /* NEW: Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 36, 107, 0.3); /* NEW */
+}
+
+/* ===== TERMS CHECKBOX ===== */
+.terms-checkbox {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ... (keep existing terms styles) ... */
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px; /* MODIFIED: Slightly reduce padding */
+    }
+    
+    .form-title {
+        font-size: 1.5rem; /* MODIFIED: Smaller heading */
+    }
+    
+    /* NEW: Stack action buttons vertically */
+    .action-buttons {
+        flex-direction: column;
+    }
+}

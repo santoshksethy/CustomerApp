@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer to Database</title>
+    <link rel="stylesheet" href="addCustomer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Add to your existing CSS */
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #00246B;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 36, 107, 0.1);
+        }
+        
+        .home-btn:hover {
+            background-color: #001a4d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 36, 107, 0.2);
+        }
+        
+        .home-btn i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="form-title">Add New Customer</h1>
+        <form action="addCustomer" method="post">
+            <label for="cname">Customer Name:</label>
+            <input type="text" id="cname" name="cname" required>
+            
+            <label for="ccity">Customer City:</label>
+            <input type="text" id="ccity" name="ccity" required>
+            
+            <label for="cmail">Customer Mail-Id:</label>
+            <input type="text" id="cmail" name="cmail" required>
+            
+            <label for="cph">Customer Phone number:</label>
+            <input type="text" id="cph" name="cph" required>
+            
+            <input type="submit" value="Add to Database">
+        </form>
+        
+        <a href="home.html" class="home-btn">
+            <i class="fas fa-home"></i> Cancel
+        </a>
+    </div>
+</body>
+</html>

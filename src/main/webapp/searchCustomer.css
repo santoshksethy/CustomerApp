@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* Add to your existing addCustomer.css or use separately */
+.search-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 36, 107, 0.1);
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-container h1 {
+    color: #00246B;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-form label {
+    color: #00246B;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.search-form input[type="text"] {
+    padding: 12px;
+    border: 2px solid #CADCFC;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #00246B;
+    outline: none;
+}
+
+.search-form input[type="submit"] {
+    background-color: #00246B;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.search-form input[type="submit"]:hover {
+    background-color: #001a4d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 36, 107, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .search-container {
+        padding: 20px;
+    }
+    
+    .search-form input[type="text"],
+    .search-form input[type="submit"] {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* Customer Details Card - Add to your CSS file */
+.customer-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 36, 107, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.customer-header {
+    color: #00246B;
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #CADCFC;
+    padding-bottom: 10px;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #00246B;
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.detail-value {
+    color: #333;
+    padding: 8px 12px;
+    background: #f5f9ff;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.action-buttons a {
+    background: #00246B;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-buttons a:hover {
+    background: #001a4d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 36, 107, 0.2);
+}
+
+.action-buttons a i {
+    font-size: 18px;
+}
+
+/* Add this if you include Font Awesome for icons */
+.icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+
+/* ===== Typography ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern stack */
+    line-height: 1.6;
+}
+
+.customer-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.detail-label {
+    font-size: 1rem;
+    font-weight: 600; /* Semi-bold */
+}
+
+.detail-value {
+    font-size: 1rem;
+    font-family: 'Courier New', monospace; /* For data values */
+}
+
+.action-buttons a {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Existing Styles ===== */
+.customer-card {
+    /* Previous card styles */
+    font-size: 1rem; /* Base size */
+}
+
+/* Responsive typography */
+@media (max-width: 600px) {
+    .customer-header {
+        font-size: 1.5rem;
+    }
+}

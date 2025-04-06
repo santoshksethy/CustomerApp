@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Customers</title>
+    <link rel="stylesheet" href="ViweAllCustomers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="form-title">
+            <i class="fas fa-users"></i> View All Customers
+        </h1>
+        
+        <form action="ViewAllCustomers" method="post">
+            <div class="terms-checkbox">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="cond">
+                    I agree to the <a href="#" class="terms-link">Terms And Conditions</a>
+                    of accessing customer data
+                </label>
+            </div>
+            
+            <input type="submit" value="View All Customers" class="submit-btn">
+        </form>
+    </div>
+</body>
+</html>
